@@ -11,7 +11,7 @@
  Target Server Version : 80018
  File Encoding         : 65001
 
- Date: 01/08/2021 07:01:19
+ Date: 10/11/2021 06:37:21
 */
 
 SET NAMES utf8mb4;
@@ -40,13 +40,14 @@ CREATE TABLE `data_kelahiran`  (
   `updated_at` datetime(0) NULL DEFAULT NULL,
   `created_at` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of data_kelahiran
 -- ----------------------------
 INSERT INTO `data_kelahiran` VALUES (1, 9, '3525060306990011', 'Sabtu', 'Sidoarjo', '2021-06-19', '23:59:00', 'Normal', '2', 5, 50, '3525060306990002', '3525060306990003', 1, '222', '2021-06-20 00:15:30', '2021-06-19 15:12:41');
 INSERT INTO `data_kelahiran` VALUES (2, 12, '3525060306990011', 'Selasa', 'Sidoarjo', '2021-06-28', '20:58:00', 'Normal', '1', 5, 50, '3525060306990001', '3525060306990003', 1, '222', '2021-07-03 09:50:39', '2021-06-28 14:00:05');
+INSERT INTO `data_kelahiran` VALUES (3, 13, '3525060306990011', 'Senin', 'Surabaya', '2021-12-31', '23:00:00', 'Cesar', '1', 5, 50, '3525060306990003', '3525060306990003', 1, '222', '2021-11-07 13:24:09', '2021-11-07 13:10:54');
 
 -- ----------------------------
 -- Table structure for data_kematian
@@ -67,7 +68,7 @@ CREATE TABLE `data_kematian`  (
   `created_at` datetime(0) NULL DEFAULT NULL,
   `updated_at` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of data_kematian
@@ -97,7 +98,7 @@ CREATE TABLE `data_penduduk`  (
   `gol_darah` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `kewarganegaraan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of data_penduduk
@@ -107,8 +108,9 @@ INSERT INTO `data_penduduk` VALUES (2, 3, 3525060306990011, 3525060306990002, 'A
 INSERT INTO `data_penduduk` VALUES (4, 2, 12121221, 222, 'Dimas Widyatama (Kades)', 'Surabaya', '1999-11-01', 'Laki-Laki', 'Jalan Sawunggaling Lamongan', '01', '01', 'Islam', 'Sudah', 'S1', 'Siswa/Mahasiswa', 'B', 'WNI');
 INSERT INTO `data_penduduk` VALUES (9, NULL, 3525060306990011, NULL, 'Baby Kecil', 'Sidoarjo', '2021-06-19', 'Laki-Laki', 'Lemah Putih', '01', '01', 'Islam', NULL, NULL, NULL, 'A', 'WNI');
 INSERT INTO `data_penduduk` VALUES (10, 6, 3525060306990011, 3525060306990001, 'Wowok', 'Surabaya', '1999-12-01', 'Laki-Laki', 'Jalan', '01', '01', 'Islam', 'Sudah', 'S1', 'Pejabat', 'A', 'WNI');
-INSERT INTO `data_penduduk` VALUES (11, 5, 3525060306990011, 3525060306990003, 'Ibunya Wowok', 'Surabaya', '1999-12-01', 'Laki-Laki', 'Jalan', '01', '01', 'Islam', 'Sudah', 'S1', 'Pejabat', 'A', 'WNI');
+INSERT INTO `data_penduduk` VALUES (11, 12, 3525060306990011, 3525060306990003, 'Ibunya Wowok', 'Surabaya', '1999-12-01', 'Laki-Laki', 'Jalan', '01', '01', 'Islam', 'Sudah', 'S1', 'Pejabat', 'A', 'WNI');
 INSERT INTO `data_penduduk` VALUES (12, NULL, 3525060306990011, NULL, 'Adi Prasetyo', 'Sidoarjo', '2021-06-28', 'Laki-Laki', 'Lemah Putih', '09', '01', 'Islam', NULL, NULL, NULL, 'A', 'WNI');
+INSERT INTO `data_penduduk` VALUES (13, NULL, 3525060306990011, NULL, 'Andik', 'Surabaya', '2021-12-31', 'Laki-Laki', 'Lemah Putih', '01', '01', 'Islam', NULL, NULL, NULL, 'A', 'WNI');
 
 -- ----------------------------
 -- Table structure for hak_akses
@@ -139,7 +141,7 @@ CREATE TABLE `users`  (
   `created_at` datetime(0) NULL DEFAULT NULL,
   `updated_at` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
@@ -148,7 +150,7 @@ INSERT INTO `users` VALUES (1, '111', '$2y$10$W3dcnEpF9pYLT55ai4yGVOPOBesP0NH9Ny
 INSERT INTO `users` VALUES (2, '222', '$2y$10$dbtaeh3br1ZUVx6/OcKqierjOuGcrazL06RFqRUTgGXlDyHFVYkxS', 2, '2021-05-15 14:56:30', '2021-05-15 14:56:30');
 INSERT INTO `users` VALUES (3, '3525060306990002', '$2y$10$PXRo2va90eqZbwpQJfOSaOMr1byN1AIx0EmU8rcmAxVlJ9mTjnp5.', 3, '2021-05-15 14:56:46', '2021-05-15 14:56:46');
 INSERT INTO `users` VALUES (4, '3525060306990001', '$2y$10$PXRo2va90eqZbwpQJfOSaOMr1byN1AIx0EmU8rcmAxVlJ9mTjnp5.', 3, '2021-05-15 14:56:46', '2021-05-15 14:56:46');
-INSERT INTO `users` VALUES (5, '3525060306990003', '$2y$10$PXRo2va90eqZbwpQJfOSaOMr1byN1AIx0EmU8rcmAxVlJ9mTjnp5.', 3, '2021-05-15 14:56:46', '2021-05-15 14:56:46');
 INSERT INTO `users` VALUES (6, '3525060306990001', '$2y$10$NEXh9EMg3swwbRz7tp89YePpNe3nFlq1kgvh9pKkC9FoE9A1SowFO', 3, '2021-06-28 13:55:16', '2021-06-28 13:55:16');
+INSERT INTO `users` VALUES (12, '3525060306990003', '$2y$10$.BifWeEpMro.BuwmMdjgZusg81vGasaa7xE8Md.p.4Bno1ToUUmpe', 3, '2021-11-07 13:04:28', '2021-11-07 13:04:28');
 
 SET FOREIGN_KEY_CHECKS = 1;
